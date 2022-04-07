@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_discord.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="discord basic0000" x="0" y="0" width="400" height="400" pivotX="10.5" pivotY="14.85"/>
+	<SubTexture name="discors white0000" x="0" y="0" width="400" height="400" pivotX="10.5" pivotY="14.85"/>
+</TextureAtlas>
