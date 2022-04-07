@@ -81,7 +81,6 @@ class ModsDownloadState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-		        ['Ron 2.0','ron','Download','https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', 'F73838'],
 		        [''],
 		];
 		
