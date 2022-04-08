@@ -27,7 +27,7 @@ import Controls;
 
 using StringTools;
 
-class OptionsState extends MusicBeatState
+class AccountState extends MusicBeatState
 {
 	var options:Array<String> = ['Account'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
