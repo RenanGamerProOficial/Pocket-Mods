@@ -1,4 +1,4 @@
-package options;
+package account;
 
 #if desktop
 import Discord.DiscordClient;
