@@ -248,7 +248,7 @@ class MainMenuState extends MusicBeatState
 									case 'mods':
 										MusicBeatState.switchState(new ModsDownloadState());
                                                                         case 'account':
-										LoadingState.loadAndSwitchState(new accounts.AccountState());
+										LoadingState.loadAndSwitchState(new optinos.AccountState());
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 								}
