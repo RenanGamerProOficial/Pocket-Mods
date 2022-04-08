@@ -43,7 +43,7 @@ class AccountSubState extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Online Mode',
-			'lets you can play online/nthis option does not yet have',
+			'lets you can play online\nthis option does not yet have',
 			'onlineMode',
 			'bool',
 			false);
