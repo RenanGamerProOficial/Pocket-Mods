@@ -25,8 +25,8 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-        public static var pocketModsVersion:String = '1.2.4'; //This is also used for Discord RPC
-        public static var psychEngineVersion:String = '0.5.2h';
+        public static var pocketModsVersion:String = '1.4.2'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '0.5.2h';
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -38,10 +38,9 @@ class MainMenuState extends MusicBeatState
 		'freeplay',
 		// #if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
-                'mods',
+                'mods
 		#if !switch 'discord', #end
-		'account',
-                'options'
+		'options'
 	];
 
 	var magenta:FlxSprite;
@@ -55,7 +54,7 @@ class MainMenuState extends MusicBeatState
 
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus From Mods", null);
+		DiscordClient.changePresence("In the Menus", null);
 		#end
 		debugKeys = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_1'));
 
@@ -118,7 +117,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
                         menuItem.x = 100;
-			// menuItem.screenCenter(X);
+		        // menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
@@ -130,7 +129,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Pocket Mods v" + pocketModsVersion, 12);
+                var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Pocket Mods v" + pocketModsVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -204,11 +203,18 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
+			if (controls.BACK)
+			{
+				selectedSomethin = true;
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				MusicBeatState.switchState(new TitleState());
+			}
+
 			if (controls.ACCEPT)
 			{
 				if (optionShit[curSelected] == 'discord')
 				{
-					CoolUtil.browserLoad('https://discord.gg/2vMUnxTJ6F');
+					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
 				}
 				else
 				{
@@ -241,14 +247,10 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
-									case 'mods':
+                                                                        case 'mods':
 										MusicBeatState.switchState(new ModsDownloadState());
-                                                                        case 'account':
-										LoadingState.loadAndSwitchState(new account.AccountState());
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 								}
@@ -268,7 +270,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			// spr.screenCenter(X);
+	                // spr.screenCenter(X);
 		});
 	}
 
