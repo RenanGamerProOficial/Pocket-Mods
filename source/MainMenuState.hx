@@ -40,8 +40,8 @@ class MainMenuState extends MusicBeatState
 		'credits',
                 'mods',
 		#if !switch 'discord', #end
-                'account'
 		'options'
+                'account'
 	];
 
 	var magenta:FlxSprite;
@@ -246,11 +246,11 @@ class MainMenuState extends MusicBeatState
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'mods':
-										MusicBeatState.switchState(new ModsDownloadState());
-                                                                        case 'account':
-										LoadingState.loadAndSwitchState(new optinos.AccountState());
+										MusicBeatState.switchState(new ModsDownloadState()); 
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
+                                                                        case 'account':
+										LoadingState.loadAndSwitchState(new optinos.AccountState());
 								}
 							});
 						}
