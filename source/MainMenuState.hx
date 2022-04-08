@@ -39,7 +39,7 @@ class MainMenuState extends MusicBeatState
 		// #if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
                 'mods
-		#if !switch 'discord', #end
+		// #if !switch 'discord', #end
 		'options'
 	];
 
