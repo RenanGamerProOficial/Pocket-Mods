@@ -37,7 +37,7 @@ class AccountState extends MusicBeatState
 	function openSelectedSubstate(label:String) {
 		switch(label) {
 			case 'Account':
-				openSubState(new options.AccountSubState());
+				openSubState(new account.AccountSubState());
 		}
 	}
 
