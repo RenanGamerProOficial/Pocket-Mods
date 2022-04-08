@@ -34,6 +34,13 @@ class AccountSubState extends BaseOptionsMenu
 		title = 'Account Settings';
 		rpcTitle = 'Account Settings Menu'; //for Discord Rich Presence
 
+	        var option:Option = new Option('UserName:',
+			"What name do you want?",
+			'userName',
+			'string',
+			'No Name',
+			['No Name', 'Juvenaldo1052', 'House', 'User1']);
+		addOption(option);
 
 		var option:Option = new Option('Online Mode',
 			'lets you can play online/nthis option does not yet have',
