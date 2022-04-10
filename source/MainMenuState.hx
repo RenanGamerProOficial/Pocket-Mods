@@ -25,7 +25,7 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var pocketModsVersion:String = '1.2.4'; //This is also used for Discord RPC
+	public static var pocketModsVersion:String = '1.5.3'; //This is also used for Discord RPC
 	public static var psychEngineVersion:String = '0.5.2h';
 	public static var curSelected:Int = 0;
 
@@ -246,7 +246,7 @@ class MainMenuState extends MusicBeatState
 									case 'story_mode':
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
-										MusicBeatState.switchState(new FreeplayState());
+										LoadingState.loadAndSwitchState(new FreeplaySubState());
 									case 'mods':
 										MusicBeatState.switchState(new ModsDownloadState());
 									case 'awards':
