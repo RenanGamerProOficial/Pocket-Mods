@@ -37,9 +37,9 @@ class OptionsState extends MusicBeatState
 	function openSelectedSubstate(label:String) {
 		switch(label) {
 			case 'FreePlay':
-				openSubState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplayState());
                         case 'Menu Codes':
-				openSubState(new ControlsSubState());
+				MusicBeatState.switchState(new FreeplayState());
 		}
 	}
 
