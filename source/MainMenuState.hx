@@ -25,7 +25,7 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var pocketModsVersion:String = '1.5.3'; //This is also used for Discord RPC
+	public static var pocketModsVersion:String = '1.5.5'; //This is also used for Discord RPC
 	public static var psychEngineVersion:String = '0.5.2h';
 	public static var curSelected:Int = 0;
 
